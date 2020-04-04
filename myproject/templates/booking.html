@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+  <br>
+  <h5>Personal Details</h5>
+  {{form.hidden_tag()}}
+  {{form.name.label}}{{form.name(class = "form-control")}}
+  {{form.address.label}}{{form.address(class = "form-control")}}
+  {{form.ph_number.label}}{{form.ph_number(class = "form-control")}}
+  <br>
+  <br>
+  <h5>Shirt Measurements</h5>
+  {{form.length_shirt.label}}{{form.length_shirt(class = "form-control")}}
+  {{form.chest_shirt.label}}{{form.chest_shirt(class = "form-control")}}
+  {{form.waist_shirt.label}}{{form.waist_shirt(class = "form-control")}}
+  {{form.shoulder_shirt.label}}{{form.shoulder_shirt(class = "form-control")}}
+  {{form.hips_shirt.label}}{{form.hips_shirt(class = "form-control")}}
+  {{form.neck_shirt.label}}{{form.neck_shirt(class = "form-control")}}
+  {{form.sleeves_shirt.label}}{{form.sleeves_shirt(class = "form-control")}}
+  {{form.flair_shirt.label}}{{form.flair_shirt(class = "form-control")}}
+  {{form.slit_shirt.label}}{{form.slit_shirt(class = "form-control")}}
+  {{form.armhole_shirt.label}}{{form.armhole_shirt(class = "form-control")}}
+  {{form.biceps_shirt.label}}{{form.biceps_shirt(class = "form-control")}}
+  {{form.front_shirt.label}}{{form.front_shirt(class = "form-control")}}
+  {{form.back_shirt.label}}{{form.back_shirt(class = "form-control")}}
+  <br>
+  <br>
+  <h5>Trouser Measurements</h5>
+  {{form.length_trouser.label}}{{form.length_trouser(class = "form-control")}}
+  {{form.poncha_trouser.label}}{{form.poncha_trouser(class = "form-control")}}
+  <br>
+  <br>
+  <h5>Blouse Measurements</h5>
+  {{form.length_blouse.label}}{{form.length_blouse(class = "form-control")}}
+  {{form.chest_blouse.label}}{{form.chest_blouse(class = "form-control")}}
+  {{form.shoulder_blouse.label}}{{form.shoulder_blouse(class = "form-control")}}
+  {{form.neck_blouse.label}}{{form.neck_blouse(class = "form-control")}}
+  {{form.sleeves_blouse.label}}{{form.sleeves_blouse(class = "form-control")}}
+  {{form.armhole_blouse.label}}{{form.armhole_blouse(class = "form-control")}}
+  {{form.biceps_blouse.label}}{{form.biceps_blouse(class = "form-control")}}
+  {{form.plate_blouse.label}}{{form.plate_blouse(class = "form-control")}}
+  <br>
+  <br>
+  <h5>Any extra's</h5>
+  {{form.extra_1.label}}{{form.extra_1(class = "form-control")}}
+  {{form.extra_2.label}}{{form.extra_2(class = "form-control")}}
+  {{form.extra_3.label}}{{form.extra_3(class = "form-control")}}
+  {{form.extra_4.label}}{{form.extra_4(class = "form-control")}}
+  <br>
+  {{form.submit(class = "btn btn-primary")}}
+</form>
+
+
+{% endblock %}

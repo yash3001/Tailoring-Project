@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Here are the Customer Details</h3>
+<br>
+  {% if session['customer']: %}
+  {% for customer in session['customer']: %}
+    <h4>Customer Name: {{customer.name}}</h4>
+    <br>
+    <h5>Details are:</h5>
+    <br>
+    <ul>
+      <li>ID: {{customer.id}}</li>
+      <li>Name: {{customer.name}}</li>
+      <li>Address: {{customer.address}}</li>
+      <li>Phone Number: {{customer.ph_number}}</li>
+    </ul>
+    <h5>Shirt Measurements:</h5>
+      <ul>
+      <li>Length: {{customer.length_shirt}}</li>
+      <li>Chest: {{customer.chest_shirt}}</li>
+      <li>Waist: {{customer.waist_shirt}}</li>
+      <li>Shoulder: {{customer.shoulder_shirt}}</li>
+      <li>Hips: {{customer.hips_shirt}}</li>
+      <li>Neck: {{customer.neck_shirt}}</li>
+      <li>Sleeves: {{customer.sleeves_shirt}}</li>
+      <li>Flair: {{customer.flair_shirt}}</li>
+      <li>Slit: {{customer.slit_shirt}}</li>
+      <li>Armhole: {{customer.armhole_shirt}}</li>
+      <li>Biceps: {{customer.biceps_shirt}}</li>
+      <li>Front: {{customer.front_shirt}}</li>
+      <li>Back: {{customer.back_shirt}}</li>
+      </ul>
+      <h5>Trouser Measurements:</h5>
+      <ul>
+      <li>Length: {{customer.length_trouser}}</li>
+      <li>Poncha: {{customer.poncha_trouser}}</li>
+      </ul>
+      <h5>Blouse Measurements:</h5>
+      <ul>
+      <li>Length: {{customer.length_blouse}}</li>
+      <li>Chest: {{customer.chest_blouse}}</li>
+      <li>Shoulder: {{customer.shoulder_blouse}}</li>
+      <li>Neck: {{customer.neck_blouse}}</li>
+      <li>Sleeves: {{customer.sleeves_blouse}}</li>
+      <li>Armhole: {{customer.armhole_blouse}}</li>
+      <li>Biceps: {{customer.biceps_blouse}}</li>
+      <li>Plates: {{customer.plate_blouse}}</li>
+      </ul>
+      <h5>Extra's</h5>
+      <ul>
+      <li>{{customer.extra_1}}</li>
+      <li>{{customer.extra_2}}</li>
+      <li>{{customer.extra_3}}</li>
+      <li>{{customer.extra_4}}</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+  {% endfor %}
+  {% else: %}
+  <h4>No Customer was found</h4>
+  {% endif %}
+{% endblock %}

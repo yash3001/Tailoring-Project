@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if current_user.is_authenticated: %}
+<h1>Welcome to Hi-Designs</h1>
+<br>
+<h3>Please select anyone option from the navigation-bar</h3>
+{% else: %}
+<h1>Please Login to Continue</h1>
+{% endif %}
+
+{% endblock %}

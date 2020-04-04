@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Customer ID must be correct for the changes to take place</h3>
+<br>
+<form method="POST">
+  {{form.hidden_tag()}}
+  {{form.id.label}}{{form.id(class = "form-control")}}
+  <br>
+  {{form.submit(class = "btn btn-primary")}}
+</form>
+
+{% endblock %}

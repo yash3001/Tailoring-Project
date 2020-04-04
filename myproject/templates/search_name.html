@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Search by Customer Name</h3>
+<br>
+<form method="POST">
+  {{form.hidden_tag()}}
+  {{form.name.label}}{{form.name(class = "form-control")}}
+  <br>
+  {{form.submit(class = "btn btn-primary")}}
+</form>
+
+{% endblock %}
